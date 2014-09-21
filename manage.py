@@ -1,11 +1,12 @@
 from datetime import datetime
 
-from flask.ext.script import Manager
+from flask.ext.script import Manager, Server
 
 from app import app, db
 from app.models import User, Post
 
 manager = Manager(app)
+manager.add_command("runserver", Server(host="0.0.0.0", port=8080))
 
 
 @manager.command
