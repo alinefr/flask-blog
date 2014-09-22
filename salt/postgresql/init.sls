@@ -1,19 +1,20 @@
+<<<<<<< HEAD
 postgresql:
   pkg:
     - installed
     - names:
-      - postgresql-9.1
+      - postgresql-9.3
       - python-dev
       - libpq-dev
 
   service.running:
     - watch:
-      - file: /etc/postgresql/9.1/main/pg_hba.conf
+      - file: /etc/postgresql/9.3/main/pg_hba.conf
     - require:
       - pkg: postgresql
 
   file.managed:
-    - name: /etc/postgresql/9.1/main/pg_hba.conf
+    - name: /etc/postgresql/9.3/main/pg_hba.conf
     - source: salt://postgresql/pg_hba.conf
     - user: postgres
     - group: postgres
@@ -42,3 +43,4 @@ postgresql-database-setup:
     - user: postgres
     - require:
       - postgres_user: postgresql-database-setup
+
