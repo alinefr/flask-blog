@@ -1,0 +1,14 @@
+import os
+
+DEBUG = False
+SECRET_KEY = "{{ pillar['secret_key'] }}"
+
+if DEBUG:
+    root = os.path.abspath(os.path.dirname(__file__))
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(root, 'sqlite3.db')
+else:
+    db = "{{ pillar['postgresql_db'] }}"
+    username = "{{ pillar['postgresql_user'] }}"
+    password = "{{ pillar['postgresql_password'] }}"
+    uri = 'postgres://%s:%s@localhost:5432/%s' % (username, password, db)
+    SQLALCHEMY_DATABASE_URI = uri

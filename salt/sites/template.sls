@@ -1,5 +1,5 @@
 {% set root = '/srv/www' %}
-{% set user = 'aline' %}
+{% set user = salt['pillar.get']('username','aline') %}
 {% set proj_name = grains['host'] %}
 
 include:
