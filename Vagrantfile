@@ -43,6 +43,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # config.vm.synced_folder "../data", "/vagrant_data"
   config.vm.synced_folder ".", "/vagrant", disabled: true
   config.vm.synced_folder "salt", "/srv/salt"
+  config.vm.synced_folder "pillar", "/srv/pillar"
   config.vm.synced_folder ".", "/srv/www"
 
   # Provider-specific configuration so you can fine-tune various
