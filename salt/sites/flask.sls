@@ -15,3 +15,12 @@ venv:
     - cwd: /srv/www
     - requirements: /srv/www/requirements.txt
 
+flask settings:
+  file:
+    - managed
+    - name: /srv/www/config.py
+    - source: salt://sites/config.py.template
+    - template: jinja
+
+
+      
