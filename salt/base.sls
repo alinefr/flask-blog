@@ -5,3 +5,7 @@ telnet:
 supervisor:
   pkg:
     - installed
+
+libpq-dev:
+  pkg:
+    - installed
