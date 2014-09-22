@@ -1,4 +1,4 @@
-{% set user = 'vagrant' %}
+{% set user = 'aline' %}
 python-virtualenv:
   pkg:
     - installed

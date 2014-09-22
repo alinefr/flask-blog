@@ -1,5 +1,5 @@
 {% set root = '/srv/www' %}
-{% set user = 'vagrant' %}
+{% set user = 'aline' %}
 {% set proj_name = grains['host'] %}
 
 include:
