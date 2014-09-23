@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 postgresql:
   pkg:
     - installed
