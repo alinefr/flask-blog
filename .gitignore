@@ -40,3 +40,4 @@ nosetests.xml
 Vagrantfile
 *~
 pillar
+images
